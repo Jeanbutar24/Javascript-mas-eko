@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure</title>
+  </head>
+  <body>
+    <script>
+      function createAdder(value) {
+        const owner = "eko";
+        function add(param) {
+          document.writeln(`<p>${owner}</p>`);
+          return value + param;
+        }
+        return add;
+      }
+
+      const addTwo = createAdder(2);
+      /*
+      function add (param){
+          document.writeln("eko")
+          return 2 + param
+      }
+          */
+      document.writeln(addTwo(10));
+      document.writeln(`<p>${addTwo(20)}</p>`);
+    </script>
+  </body>
+</html>

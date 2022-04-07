@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object method</title>
+  </head>
+  <body>
+    <script>
+      // function di dalam object disebut object method
+
+      const nama = {
+        firstName: "jean",
+        sayHello: function (name) {
+          document.writeln(`<p> hello ${name}</p>`);
+        },
+      };
+
+      nama.sayHello("jean");
+
+      // menambah method ke dalam object
+      const person = {
+        nama1: "jean",
+      };
+
+      person.sayHello1 = function (name) {
+        document.writeln(`<p>hello ${name}</p>`);
+      };
+
+      person.sayHello1("saipul");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function parameter</title>
+  </head>
+  <body>
+    <script>
+      function nama(dataSMA, dataSMP) {
+        document.writeln(`<p>Hello ${dataSMA} ${dataSMP}</p>`);
+      }
+
+      nama("jean", "butar");
+      nama("budi", "setiawan");
+
+      function jumlah(a, b, c) {
+        return a + b;
+      }
+
+      var a = parseInt(prompt("masukkan nilai a"));
+      var b = parseInt(prompt("masukkan nilai b"));
+
+      var hasil = jumlah(a, b);
+      document.writeln(hasil);
+
+      function kali(a, b) {
+        return a * b;
+      }
+      var hasilKali = kali(jumlah(a, b), jumlah(a + 2, b + 3));
+      document.writeln(`<p>${hasilKali}</p>`);
+
+      function argumenta() {
+        return arguments;
+      }
+
+      let coba = argumenta(5, 2, 4, "hii", false);
+      console.log(coba);
+
+      function tambah2() {
+        let hasil = 0;
+        for (let i = 0; i < arguments.length; i++) {
+          hasil += arguments[i];
+        }
+        return hasil;
+      }
+
+      let jumlah2 = tambah2(2, 3, 4, 5, 6, 7, 8, 9);
+      console.log(jumlah2);
+    </script>
+  </body>
+</html>

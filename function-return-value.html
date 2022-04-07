@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function return value</title>
+  </head>
+  <body>
+    <script>
+      function name(firstName, lastName) {
+        const say = `<p>Hello ${firstName} ${lastName}</p>`;
+        return say;
+      }
+      const result = name("jean", "rael");
+      document.writeln(`<p>${result}</p>`);
+
+      // function return value lebih dari satu
+
+      function getExamScore(value) {
+        if (value >= 90) {
+          return "A";
+        } else if (value >= 80) {
+          return "B";
+        } else if (value >= 65) {
+          return "C";
+        } else if (value >= 50) {
+          return "D";
+        } else {
+          return "E";
+        }
+      }
+      const nilai = prompt("masukkan nilai anda ");
+      const examValue = getExamScore(nilai);
+      document.writeln(`<p>${examValue}</p>`);
+
+      // menghentikan perulangan menggunakan function return value
+
+      function sumValue(searchValue, babi) {
+        for (const element of searchValue) {
+          if (element === babi) {
+            return true;
+          }
+        }
+        return false;
+      }
+
+      const searchValue = [1, 3, 23, 434, , 3, 4, 5, 35, 5, 3, 4, 34];
+      const babi = 22;
+      const found = sumValue(searchValue, babi);
+      document.writeln(`<p>${found}</p>`);
+    </script>
+  </body>
+</html>

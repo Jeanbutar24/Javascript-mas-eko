@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipe Data Object</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        nama: "jean rael habel butar butar",
+        umur: "31 tahun",
+        alamat: "perdagangan",
+      };
+      //ubah properti
+      person["nama"] = "Eko Kurniawan ";
+      //person["alamat"] = "perdagangan";
+      //person["umur"] = "19 tahun";
+      console.table(person);
+      // mengakses properti object
+      console.info(`nama : $(person["nama lengkap"])`);
+      console.info(`alamat: $(person.alamat)`);
+      console.info(`umur : $(person.umur)`);
+    </script>
+  </body>
+</html>

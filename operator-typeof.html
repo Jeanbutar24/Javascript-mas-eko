@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Typeof</title>
+  </head>
+  <body>
+    <script>
+      //operator typeof(melihat suatu type data suatu tipe data sebuah value)
+      let nama = "saya";
+
+      const typedata = typeof nama;
+      document.writeln(`<p>${typedata}</p>`);
+
+      // In operator (untuk mengecek apakah sebuah properti ada didalam objek atau tidak)
+      const person = {
+        firstName: "jean",
+        lastName: "butar",
+        middlename: "butar",
+      };
+      if ("firstName" in person) {
+        alert(`hello ${person.firstName}`);
+      } else {
+        alert("hello");
+      }
+      //ternary operator(jika true nilai pertama diambil jika false nilai kedua yang diambil)
+      // tanpa ternary operator
+      let nilai = 75;
+      let ucapan;
+
+      if (nilai >= 80) {
+        ucapan = "selamat anda lulus";
+      } else {
+        ucapan = "silahkan coba lagi";
+      }
+      document.writeln(`<p>${ucapan}</p>`);
+      //dengan ternary operator
+      ucapan = nilai >= 75 ? "selamat anda lulus" : "silahkan coba lagi nanti";
+      document.writeln(`<p>${ucapan}</p>`);
+    </script>
+  </body>
+</html>

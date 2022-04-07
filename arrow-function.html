@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <script>
+      // menggunakan tanda =>
+
+      const sayHello = (name) => {
+        const panggil = `hello ${name}`;
+        document.writeln(panggil);
+      };
+
+      sayHello("jean");
+
+      // arrow function tanpa block
+
+      const sayHello1 = (name) => document.writeln(`<p>hello ${name}</p>`);
+      sayHello1("jean");
+
+      // arrow function return value
+      const sum = (firstNumber, secondNumber) => {
+        return firstNumber + secondNumber;
+      };
+      document.writeln(sum(10, 100));
+
+      // jika rest parameter di arrow function hanya satu kita tidak perlu membuat anda kurung
+      const sayHello2 = (name) => document.writeln(`<p>hello ${name}</p>`);
+      sayHello2("jean butar");
+
+      // arrow function sebagai parameter
+      function giveMeName(callback) {
+        callback("susi susanti ");
+      }
+
+      //versi anynomous function
+      giveMeName(function (name) {
+        document.writeln(`<p>hello ${name}</p>`);
+      });
+
+      giveMeName((name) => document.writeln(`hello my men ${name} the best of player badminton`));
+    </script>
+  </body>
+</html>

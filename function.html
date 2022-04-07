@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function</title>
+  </head>
+  <body>
+    <script>
+      // menjumlahkan 2 kubus
+      /*
+      let sisiKubus1 = prompt("masukkan sisi kubus 1 : ");
+      let sisiKubus2 = prompt("masukkan sisi kubus 2 : ");
+
+      const volume1 = sisiKubus1 ** 3;
+      const volume2 = sisiKubus2 ** 3;
+
+      document.writeln(volume1 + volume2);
+      */
+
+      function jumlahVolume(a, b) {
+        let volumeA, volumeB, total;
+
+        let sisiA = parseInt(prompt("masukkan sisi a"));
+        let sisiB = parseInt(prompt("masukkan sisi b"));
+
+        volumeA = sisiA ** 3;
+        volumeB = sisiB ** 3;
+
+        total = volumeA + volumeB;
+        return total;
+      }
+
+      const hasil = jumlahVolume();
+      document.writeln(`<p>Hasil dari jumlah dua volume adalah ${hasil}</p> `);
+
+      //function memiliki parameter function
+
+      function jumlah(a, b) {
+        return a + b;
+      }
+      function kali(a, b) {
+        return a * b;
+      }
+
+      let hasil2 = kali(jumlah(5, 6), jumlah(6, 6));
+      console.log(hasil2);
+    </script>
+  </body>
+</html>

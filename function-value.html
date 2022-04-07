@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function sebagai value</title>
+  </head>
+  <body>
+    <script>
+      `use strict`;
+      function nama(satu) {
+        document.writeln(`<p>Halo ${satu}</p>`);
+      }
+
+      let satu = nama;
+
+      nama("jean");
+      satu("eddy");
+
+      // function didalam parameter
+
+      function nama2(callback) {
+        callback("jagaiu");
+      }
+
+      nama2(nama);
+      nama2(satu);
+
+      function useStrictMode() {
+        "use strict";
+        const person = {
+          firstName: "jean",
+        };
+
+        console.info(person.firstName);
+      }
+      useStrictMode();
+    </script>
+  </body>
+</html>

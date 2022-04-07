@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Generator</title>
+  </head>
+  <body>
+    <script>
+      function* contentName() {
+        yield "jean";
+        yield "butar";
+        yield "habel";
+      }
+
+      const names = contentName();
+      for (const name of names) {
+        console.log(name);
+      }
+      // kasus function generator yang lebih complex
+      // lazy
+      function* buatGanjil(value) {
+        for (i = 1; i <= value; i++) {
+          if (i % 2 === 1) {
+            document.writeln(`yield ${i}`);
+            yield i;
+          }
+        }
+      }
+
+      function buatGanjilArray(value) {
+        for (i = 1; i <= value; i++) {
+          const result = [];
+          if (i % 2 === 1) {
+            document.writeln(`<p>return ${i}</p>`);
+            result.push(i);
+          }
+        }
+        return result;
+      }
+
+      const angkaGanjil = buatGanjil(100);
+      //for (angka of angkaGanjil) {
+      //document.writeln(`<p>${angka}</p>`);
+      //}
+
+      document.writeln(`<p>${angkaGanjil.next().value}</p>`);
+      document.writeln(`<p>${angkaGanjil.next().value}</p>`);
+      document.writeln(`<p>${angkaGanjil.next().value}</p>`);
+    </script>
+  </body>
+</html>

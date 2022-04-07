@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>while loop</title>
+  </head>
+  <body>
+    <script>
+      /*
+       let counter = 1;
+
+       while (counter <= 20) {
+         document.writeln(`<p>perulangan ke ${counter}</p>`);
+         counter += 2;
+       }
+
+       //DO WHILE LOOP
+       let nama = 10;
+       do {
+         document.writeln(`<p>perulangan ke ${nama}</p>`);
+         nama--;
+       } while (nama >= 1);
+
+      let jumlahAgkot = 10;
+      let angkotBeroperasi = 6;
+      let noAngkot = 1;
+
+      while (noAngkot <= angkotBeroperasi) {
+        document.writeln(`<p>Angkot NO. ${noAngkot} beroperasi dengan baik</p>`);
+        noAngkot++;
+      }
+
+      for (noAngkot; noAngkot <= jumlahAgkot; noAngkot++) {
+        document.writeln(`<p>angkot NO. ${noAngkot} sedang tidak beroperasi</p>`);
+      }*/
+
+      let jumlahAgkot = 10;
+      let noAngkot = 1;
+      for (noAngkot; noAngkot <= 10; noAngkot++) {
+        let angkotBeroperasi = 6;
+        if (noAngkot <= angkotBeroperasi && noAngkot !== 5) {
+          document.writeln(`<p>angkot NO. ${noAngkot} beroperasi dengan baik</p>`);
+        } else if (noAngkot === 10 || noAngkot === 8 || noAngkot === 5) {
+          document.writeln(`<p>Agkot NO. ${noAngkot} sedang lembur</p>`);
+        } else {
+          document.writeln(`<p>angkot NO. ${noAngkot} sedang tidak beroperasi</p>`);
+        }
+      }
+    </script>
+  </body>
+</html>
